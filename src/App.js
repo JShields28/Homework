@@ -1,15 +1,17 @@
-import Routes from './Routes';
-import './App.css';
-import AboutPage from './components/AboutPage';
-import MenuPage from './components/MenuPage';
-import NavBarPage from './NavBarPage';
-import HomePage from './components/HomePage';
-import ContactPage from './components/ContactPage';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import AnotherRoundButton from "./components/AnotherRoundButton";
+import Routes from "./Routes";
+import RandomFact from "./components/RandomFact/RandomFact";
+require("dotenv").config();
 
 function App() {
+  const debugMode = true;
+
   return (
     <div className="App">
-      <Routes />
+      <h1>Google-Fu</h1>
+      <Routes debug={debugMode} />
     </div>
   );
 }
